@@ -8,7 +8,7 @@ CREATE TABLE `users` (
    `Last_Name` varchar(20) NOT NULL,
    `Email` varchar(30) NOT NULL,
    `CountryCode` varchar(20) NOT NULL,
-   `Phone_Number` bigint DEFAULT NULL,
+   `Phone_Number` varchar(15) DEFAULT NULL,
    `Date_Of_Birth` DATE,
    `Gender` varchar(10) NOT NULL,
    `Date_Created` datetime DEFAULT CURRENT_TIMESTAMP,
@@ -26,8 +26,10 @@ CREATE TABLE `users` (
    `Category` varchar(10) NOT NULL,
    `Available_Quantity` int NOT NULL,
    `Price` long NOT NULL,
+   
    PRIMARY KEY (`Product_ID`),
    UNIQUE KEY `Product_Name` (`Product_Name`)
+   
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
  
  
@@ -39,10 +41,11 @@ CREATE TABLE `users` (
    `Payment_Confirmation` varchar(10) NOT NULL,
    `Total Price` long NOT NULL,
    `User_ID` INT NOT NULL,
+   `Phone_No` varchar(15) DEFAULT NULL,
    PRIMARY KEY (`Order_ID`),
    KEY `User_ID`(`User_ID`),
-   FOREIGN KEY(`User_ID`) REFERENCES `users` (`User_ID`)
-   
+   FOREIGN KEY(`User_ID`) REFERENCES `users` (`User_ID`),
+   FOREIGN KEY (`Phone_No`) REFERENCES `users` (`Phone_Number`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
   CREATE TABLE `items_table` (
