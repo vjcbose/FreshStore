@@ -11,6 +11,10 @@ public class UserDto implements Serializable{
 	private String Last_Name;
 	private String Email;
 	private String Password;
+	private String CountryCode;
+	private String Phone_Number;
+	private Boolean Is_Admin;
+	private Boolean Subscription;
 	private String Encypted_Password;
 	private String Email_Verification_Token;
 	private Boolean Email_Verification_Status=false;
@@ -49,6 +53,30 @@ public class UserDto implements Serializable{
 	}
 	public void setPassword(String password) {
 		Password = password;
+	}
+	public String getCountryCode() {
+		return CountryCode;
+	}
+	public void setCountryCode(String countryCode) {
+		CountryCode = countryCode;
+	}
+	public String getPhone_Number() {
+		return Phone_Number;
+	}
+	public void setPhone_Number(String phone_Number) {
+		Phone_Number = phone_Number;
+	}
+	public Boolean getIs_Admin() {
+		return Is_Admin;
+	}
+	public void setIs_Admin(Boolean is_Admin) {
+		Is_Admin = is_Admin;
+	}
+	public Boolean getSubscription() {
+		return Subscription;
+	}
+	public void setSubscription(Boolean subscription) {
+		Subscription = subscription;
 	}
 	public String getEncypted_Password() {
 		return Encypted_Password;
