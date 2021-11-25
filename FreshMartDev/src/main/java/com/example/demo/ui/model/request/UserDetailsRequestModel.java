@@ -1,5 +1,6 @@
 package com.example.demo.ui.model.request;
 
+
 public class UserDetailsRequestModel {
 	
 	
