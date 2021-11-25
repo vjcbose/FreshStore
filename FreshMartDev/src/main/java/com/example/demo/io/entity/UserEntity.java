@@ -10,6 +10,11 @@ import javax.persistence.Id;
 
 @Entity(name="users")
 public class UserEntity implements Serializable {
+	
+
+	public UserEntity() {
+		super();
+	}
 
 	private static final long serialVersionUID = 5512315223586710044L;
 	
@@ -29,6 +34,23 @@ public class UserEntity implements Serializable {
 	@Column(nullable=false, length=120)
 	private String Email;
 	
+	@Column(nullable=false, length=20)
+	private String Password;
+	
+	@Column(nullable=false)
+	private String CountryCode;
+	
+	@Column(nullable=false, length=15)
+	private String Phone_Number;
+	
+	
+	private Boolean Is_Admin;
+	
+	
+	private Boolean Subscrption;
+	
+	
+	
 	@Column(nullable=false)
 	private String Encypted_Password;
 	
@@ -36,6 +58,8 @@ public class UserEntity implements Serializable {
 	
 	@Column(nullable=false )
 	private Boolean Email_Verification_Status=false;
+	
+	
 
 	public long getId() {
 		return id;
@@ -100,7 +124,48 @@ public class UserEntity implements Serializable {
 	public void setEmail_Verification_Status(Boolean email_Verification_Status) {
 		Email_Verification_Status = email_Verification_Status;
 	}
+
+	public String getPassword() {
+		return Password;
+	}
+
+	public void setPassword(String password) {
+		Password = password;
+	}
+
+	public String getCountryCode() {
+		return CountryCode;
+	}
+
+	public void setCountryCode(String countryCode) {
+		CountryCode = countryCode;
+	}
+
+	public String getPhone_Number() {
+		return Phone_Number;
+	}
+
+	public void setPhone_Number(String phone_Number) {
+		Phone_Number = phone_Number;
+	}
+
+	public Boolean getIs_Admin() {
+		return Is_Admin;
+	}
+
+	public void setIs_Admin(Boolean is_Admin) {
+		Is_Admin = is_Admin;
+	}
+
+	public Boolean getSubscrption() {
+		return Subscrption;
+	}
+
+	public void setSubscrption(Boolean subscrption) {
+		Subscrption = subscrption;
+	}
 		
+	
 	
 	
 }

@@ -16,7 +16,6 @@ public class UserDetailsRequestModel {
 	
 	private String Phone_Number;
 	
-	private String Gender;
 	
 	java.util.Date dt = new java.util.Date();
 
@@ -77,13 +76,7 @@ public class UserDetailsRequestModel {
 		Phone_Number = phone_Number;
 	}
 
-	public String getGender() {
-		return Gender;
-	}
-
-	public void setGender(String gender) {
-		Gender = gender;
-	}
+	
 
 	public java.util.Date getDt() {
 		return dt;
