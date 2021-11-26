@@ -2,10 +2,10 @@ package com.example.demo.service;
 
 import org.springframework.stereotype.Service;
 
-import com.example.demo.shared.dto.UserDto;
+import com.example.demo.model.Users;
 
 
 @Service
 public interface UserService {
-  UserDto createUser(UserDto user);
+  void createUser(Users user);
 }
